@@ -308,8 +308,8 @@ h6.major {
 }
 
 h1 {
-  font-size: 2.25rem;
-  line-height: 1.3;
+  font-size: 3rem;
+  line-height: 1;
   letter-spacing: 0.5rem;
 }
 
@@ -1450,7 +1450,7 @@ body.is-preload #bg:before {
   -webkit-transition-delay: 0.25s;
   -ms-transition-delay: 0.25s;
   transition-delay: 0.25s;
-  padding: 3rem 2rem;
+  padding: 1.7rem 1.7rem;
   max-height: 40rem;
   overflow: hidden;
 }
