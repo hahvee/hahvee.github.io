@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html,
 body,
@@ -1359,13 +1354,10 @@ $bg-hover: rgba(0, 0, 0, 0.2);
 }
 
 .gallery {
-  width: 85vw;
-  margin: 1rem auto;
-}
-
-.bg-hover,
-.overlay-hover {
-  text-align: center;
+  margin: auto;
+  display: flex; 
+  width: 100%;
+  position: center;
 }
 
 img,
@@ -1374,40 +1366,102 @@ img,
   border-radius: 3px;
 }
 
+img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.hover-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .bg-hover {
-  float: left;
-  max-width: 31%;
-  position: relative;
+  display: inline-block;
+  height: auto;
+  max-width: 45%;
+  position:sticky;
   margin: 0.5%;
-  img {
-    width: 100%;
-    margin-bottom: -4px;
-  }
-  .overlay-hover {
+  text-align: center;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #242829;
+  width: 50%;
+}
+
+.row {
+  float: center;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+.container:hover .bg-hover {
+  opacity: 0.1;
+}
+
+
+.overlay-text {
+  color: rgb(146, 146, 146);
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+  .overlay {
     position: absolute;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
     width: 100%;
-    background: $bg-hover;
-    color: #fff;
     opacity: 0;
+    transition: 0.5s ease;
+    background-color: #282c2e;
   }
+
+  .container:hover .overlay {
+    opacity: 1;
+    width: 50%;
+    position: relative;
+  }
+
   &:hover {
-    .overlay-hover {
-      opacity: 1;
+    .bg-hover {
+      opacity: 0.1;
     }
     img {
       -webkit-filter: blur(2px);
       filter: blur(2px);
     }
   }
+
+
+
 }
 
 @media screen and (max-width: 1148px) {
   .bg-hover {
     max-width: 48%;
     margin: 1%;
+  }
+  .row {
+    max-width: 100%;
+    margin-left: 30%;
   }
 }
 
@@ -1416,6 +1470,10 @@ img,
     float: none;
     max-width: 80%;
     margin: 1% auto;
+  }
+  .row {
+    max-width: 100%;
+    margin-left: 24%;
   }
 }
 
@@ -1836,7 +1894,7 @@ body.is-preload #header .content .inner {
 
 .gallery.from-left {
   width: 50%;
-  float: left;
+  float: center;
 }
 
 .gallery .image {
