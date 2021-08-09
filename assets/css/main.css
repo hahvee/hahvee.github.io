@@ -1378,6 +1378,7 @@ img {
 
 .hover-text{
   position: absolute;
+  text-align:inherit;
   top: 0%;
   bottom: 0%;
   left: 0%;
