@@ -263,11 +263,21 @@ p {
   margin: 0 0 2rem 0;
 }
 
-h1,
+h1 {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
 h2{
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 0 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
 }
 h3,
 h4,
@@ -1470,12 +1480,21 @@ img {
 @media screen and (max-width: 768px) {
   .bg-hover {
     float: none;
-    max-width: 80%;
+    max-width: 100%;
     margin: 1% auto;
   }
   .row {
     max-width: 100%;
-    margin-left: 24%;
+    margin-left: 30%;
+  }
+  .hover-text{
+    position: absolute;
+    text-align:inherit;
+    padding-bottom: 20%;
+    visibility: visible;
+    background: rgba(32, 32, 32, 0.72);
+    color: #fff;
+    opacity: 65%;
   }
 }
 
@@ -1556,6 +1575,7 @@ img {
   line-height: 5.5rem;
   border: solid 1px #ffffff;
   border-radius: 100%;
+  padding-left: 10px;
 }
 
 #header .logo .icon:before {
